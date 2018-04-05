@@ -1,0 +1,114 @@
+:root {
+    --lightBeige : #F2E8C6;
+    --lightOrange: #F5841A;
+    --lightRed: #BB0029;
+    --dark: #03002C;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--dark);
+}
+html {
+    box-sizing: border-box;
+    font-family: 'Quicksand', Courier, monospace;
+    height: 100%;
+}
+body {
+    height: 100%;
+    font-family: 'Quicksand', Courier, monospace;
+    font-size: 1.2rem;
+}
+.wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1px;
+    grid-column-gap: 1px;
+}
+header {
+    margin-bottom: 1.2rem;
+    background-color: var(--dark);
+    color: #ffffff;
+    /* z-index: 1; */
+}
+h1 {
+    font-size: 1.2rem;
+    font-style: 'Cinzel';
+}
+.brand-logo > img {
+    height: 80px;
+    width: 80px;
+}
+nav {
+    background-color: var(--dark);
+    color: #ffffff;
+    overflow: hidden;
+    top: 0;
+    position: sticky;
+    z-index: 2;
+    font-family: 'Cinzel';
+}
+.hero-image {
+    background-image: url('./img/coffeehero.jpeg');
+    opacity: 0.8;
+    height: 75vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+#below {
+    font-size: 3.5rem;
+    color: #ffffff;
+    background-color: teal;
+    border-radius: 8px;
+    cursor: pointer;
+}
+section {
+    text-align: center;
+    display: flex;
+    padding: 0 1.15rem;
+}
+
+#intro {
+    background-color: rgb(10, 4, 92);
+    color: white;
+}
+
+#history {
+    color: white;
+    background-color: purple;
+}
+
+#process {
+    color: white;
+    background-color: palevioletred;
+}
+
+footer {
+    text-align: center;
+    list-style: none;
+    color: navajowhite;
+}
+
+.social {
+    list-style: none;
+    display: block;
+}
+
+.social li {
+    display: inline-block;
+    margin: 0 5rem;
+    text-align: center;
+    font-size: 1.75rem;
+}
