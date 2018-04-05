@@ -99,7 +99,9 @@ section {
 #process {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
+    text-align: center;
     justify-content: center;
     color: white;
     background-color: palevioletred;
@@ -113,12 +115,16 @@ footer {
 
 .social {
     list-style: none;
-    display: block;
+    display: inline-flex;
+    flex-grow: inherit;
 }
 
 .social li {
-    display: inline-block;
-    margin: 0 5rem;
-    text-align: center;
-    font-size: 1.75rem;
+    display: block;
+    font-size: 1.25rem;
+    margin: 0 10px;
+}
+
+#copyright {
+    margin: 0 0 0 40px;
 }
