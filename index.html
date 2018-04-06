@@ -1,93 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Stylesheets-->
-    <link rel="stylesheet" href="./style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <!--Fonts-->
-		<link href="https://fonts.googleapis.com/css?family=Cinzel|Quicksand" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<!--Scripts-->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="./mobilenav.js"></script>
-    <title>Espresso Vivace</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--Stylesheets-->
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+	    crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Scripts-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./mobilenav.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(window).scroll(function(){
+				if($(this).scrollTop() > 100){
+					$('#scrollTop').fadeIn();
+				}else{
+					$('#scrollTop').fadeOut();
+				}
+			  });
+			$('#scrollTop').click(function(){
+				$("html, body").animate({ scrollTop: 0 }, 600);
+				return false;
+			});
+		});
+		</script>
+	<title>Espresso Vivace</title>
 </head>
+
 <body>
-    <header>
-			<span>Log In</span>
-			<span>Contact Us</span>
-		</header>
-    <nav>
-			<div class="nav-wrapper">
-					<a href="#!" class="brand-logo"><img src="./img/cafelogo.png" alt="cafe"></a>
-					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-				<ul class="right hide-on-med-and-down">
-					<li class="nav-link"><a href="#">Our Coffee</a></li>
-					<li class="nav-link"><a href="#">Locations</a></li>
-					<li class="nav-link"><a href="#">Shop Online</a></li>
-					<li class="nav-link"><a href="#">Education</a></li>
-					<li class="nav-link"><a href="#">Training</a></li>
-					<li class="nav-link"><a href="#">About Us</a></li>
-			  </ul>
-		  </div>
-		</nav>
-		<ul class="sidenav" id="mobile-demo">
-			<li><a href="#">Our Coffee</a></li>
-			<li><a href="#">Locations</a></li>
-			<li><a href="#">Shop Online</a></li>
-			<li><a href="#">Education</a></li>
-			<li><a href="#">Training</a></li>
-			<li><a href="#">About Us</a></li>
-		</ul>
-		<div class="wrapper">
-				<div class="hero-image">
-						<div class="hero-text">
-							 <h1>Explore our blends</h1>
-							<p>Learn more</p>
-							<button id="below">Below</button>
-						</div>
-					</div>
-					<section id="intro">
-						<div class="row">
-							<div class="col s12 m6">
-									<h1>Our coffee</h1>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nulla mollitia optio ad distinctio, eaque itaque facere eius nisi, ducimus soluta dolore fugit officiis minus ipsam nobis? Sequi odit reiciendis ex soluta beatae doloremque et. Hic voluptatum minima atque dolorem cum magni consequatur nesciunt, iste pariatur, alias adipisci, voluptatibus molestias.</p>
-							</div>
-							<div class="col s12 m6">
-								<img src="./img/coffeecup.jpeg" alt="coffeecup" class="responsive-img circle">
-							</div>
-						</div>
-					</section>
-					<section id="history">
-						<div class="row">
-							<div class="col s12 m6">
-									<h1>Back to our roots</h1>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima deserunt quam natus. Eos, sit accusamus amet assumenda libero sed ipsam exercitationem doloribus ad nihil animi! Harum pariatur atque, sapiente eligendi voluptatum praesentium eaque dolorum non, sint iste provident cum voluptatem ab recusandae commodi architecto blanditiis autem et maiores.</p>
-							</div>
-							<div class="col s12 m6">
-									<div class="card-panel hoverable transparent">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rerum eligendi ad soluta nisi autem laudantium, nulla dignissimos distinctio unde nihil consectetur nostrum alias aspernatur, ullam assumenda. Animi unde facilis libero sunt vero molestias consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, fuga doloremque quis tempora ullam ipsa aliquid voluptatibus dolorum praesentium iure?
-									</div>
-							</div>
-						</div>
-					</section>
-					<section id="process">
-							<h1>How it's made</h1>
-							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem aperiam ea corporis explicabo ipsam deserunt soluta sed nam modi iusto ex, alias, dolores blanditiis eveniet obcaecati rerum laudantium velit. Possimus aut atque sit veniam odit nostrum sapiente, autem ea excepturi voluptatum quis similique maiores, ex aperiam deserunt, at molestias laborum enim. Delectus qui dicta sed, culpa accusantium dolorem sit quia nihil debitis voluptatibus vitae quam dolores sapiente, maxime officiis architecto soluta reprehenderit ratione similique asperiores. Reprehenderit dignissimos porro esse et quasi at quaerat accusantium fugiat consequuntur quisquam magnam enim earum nobis iusto aut animi perspiciatis corporis doloremque.</p>
-					</section>
+	<header>
+		<span>Log In</span>
+		<span>Contact Us</span>
+	</header>
+	<nav>
+		<div class="nav-wrapper">
+			<a href="./index.html" class="brand-logo">
+				<img src="./img/cafelogo.png" alt="cafe">
+			</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger">
+				<i class="material-icons">menu</i>
+			</a>
+			<ul class="right hide-on-med-and-down">
+				<li class="nav-link">
+					<a href="#">Our Coffee</a>
+				</li>
+				<li class="nav-link">
+					<a href="#">Locations</a>
+				</li>
+				<li class="nav-link">
+					<a href="#">Shop Online</a>
+				</li>
+				<li class="nav-link">
+					<a href="#">Education</a>
+				</li>
+				<li class="nav-link">
+					<a href="#">Training</a>
+				</li>
+				<li class="nav-link">
+					<a href="#">About Us</a>
+				</li>
+			</ul>
 		</div>
-    <footer>
-			<span id="copyright">&copy;Alan Grinberg, 2018</span>
-        <ul class="social">
-            <li><i class="fa fa-search"></i></li>
-            <li><i class="fa fa-eye"></i></li>
-            <li><i class="fa fa-globe"></i></li>
-        </ul>
-		</footer>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-	</body>
+	</nav>
+	<ul class="sidenav" id="mobile-demo">
+		<li>
+			<a href="#">Our Coffee</a>
+		</li>
+		<li>
+			<a href="#">Locations</a>
+		</li>
+		<li>
+			<a href="#">Shop Online</a>
+		</li>
+		<li>
+			<a href="#">Education</a>
+		</li>
+		<li>
+			<a href="#">Training</a>
+		</li>
+		<li>
+			<a href="#">About Us</a>
+		</li>
+	</ul>
+	<div class="wrapper">
+		<div class="hero-image">
+			<div class="hero-text">
+				<h1>Explore our blends</h1>
+				<p>Learn more</p>
+				<a id="below" class="waves-effect waves-light btn-large">Below</a>
+			</div>
+		</div>
+		<section id="intro">
+			<div class="row">
+				<div class="col s12 m6">
+					<h1>Our coffee</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nulla mollitia optio ad distinctio, eaque itaque
+						facere eius nisi, ducimus soluta dolore fugit officiis minus ipsam nobis? Sequi odit reiciendis ex soluta beatae doloremque
+						et. Hic voluptatum minima atque dolorem cum magni consequatur nesciunt, iste pariatur, alias adipisci, voluptatibus
+						molestias.</p>
+				</div>
+				<div class="col s12 m6">
+					<img src="./img/coffeecup.jpeg" alt="coffeecup" class="responsive-img circle">
+				</div>
+			</div>
+		</section>
+		<section id="history">
+			<div class="row">
+				<div class="col s12 m6">
+					<h1>Back to our roots</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima deserunt quam natus. Eos, sit accusamus amet assumenda
+						libero sed ipsam exercitationem doloribus ad nihil animi! Harum pariatur atque, sapiente eligendi voluptatum praesentium
+						eaque dolorum non, sint iste provident cum voluptatem ab recusandae commodi architecto blanditiis autem et maiores.</p>
+				</div>
+				<div class="col s12 m6">
+					<div class="card-panel hoverable transparent">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rerum eligendi ad soluta nisi autem laudantium, nulla dignissimos
+						distinctio unde nihil consectetur nostrum alias aspernatur, ullam assumenda. Animi unde facilis libero sunt vero molestias
+						consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, fuga doloremque quis tempora ullam
+						ipsa aliquid voluptatibus dolorum praesentium iure?
+					</div>
+					<div class="card-panel hoverable transparent">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rerum eligendi ad soluta nisi autem laudantium, nulla dignissimos
+						distinctio unde nihil consectetur nostrum alias aspernatur, ullam assumenda. Animi unde facilis libero sunt vero molestias
+						consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, fuga doloremque quis tempora ullam
+						ipsa aliquid voluptatibus dolorum praesentium iure?
+					</div>
+					<div class="card-panel hoverable transparent">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rerum eligendi ad soluta nisi autem laudantium, nulla dignissimos
+						distinctio unde nihil consectetur nostrum alias aspernatur, ullam assumenda. Animi unde facilis libero sunt vero molestias
+						consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, fuga doloremque quis tempora ullam
+						ipsa aliquid voluptatibus dolorum praesentium iure?
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="process">
+			<div class="row">
+				<div class="col s12 m6">
+					<h1>How it's made</h1>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem aperiam ea corporis explicabo ipsam deserunt soluta
+						sed nam modi iusto ex, alias, dolores blanditiis eveniet obcaecati rerum laudantium velit. Possimus aut atque sit veniam
+						odit nostrum sapiente, autem ea excepturi voluptatum quis similique maiores, ex aperiam deserunt, at molestias laborum
+						enim. Delectus qui dicta sed, culpa accusantium dolorem sit quia nihil debitis voluptatibus vitae quam dolores sapiente,
+						maxime officiis architecto soluta reprehenderit ratione similique asperiores. Reprehenderit dignissimos porro esse
+						et quasi at quaerat accusantium fugiat consequuntur quisquam magnam enim earum nobis iusto aut animi perspiciatis corporis
+						doloremque.</p>
+				</div>
+				<div id ="item" class="col s12 m6">
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi officia harum iste eveniet commodi quaerat aliquid, facilis
+						fugiat deleniti assumenda praesentium dolorem cum saepe illo, officiis expedita consectetur culpa dicta?</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<span id="copyright">&copy;Alan Grinberg, 2018</span>
+		<ul class="social">
+			<li>
+				<i class="fa fa-search"></i>
+			</li>
+			<li>
+				<i class="fa fa-eye"></i>
+			</li>
+			<li>
+				<i class="fa fa-globe"></i>
+			</li>
+		</ul>
+	</footer>
+
+	<button id="scrollTop" class="btn-floating waves-effect"title="Go to top"></button>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</body>
+
 </html>
