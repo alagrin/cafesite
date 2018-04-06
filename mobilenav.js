@@ -9,4 +9,5 @@ $(document).ready(function(){
     $('#intro').mouseleave(function() {
       $(this).css("opacity", "0.5");
     });
+    $(".dropdown-trigger").dropdown();
   });
